@@ -20,15 +20,15 @@ The Methods Investigated
 
 Table of Contents
 =================
-+ 👋🏽 Introduction
-	+ What is forecasting?
-	+ Why is forecasting important?
-	+ How is this related to COVID?
-	+ What is "noise"?
-+ 💡 Theory Behind The Methods
-	+ Latest Datum
-	+ Polynomial Interpolation
-		+ Linear
++ 👋🏽 [Introduction](#-introduction)
+	+ [What is forecasting?](#what-is-forecasting)
+	+ [Why is forecasting important?](#why-is-forecasting-important)
+	+ [How is this related to COVID?](#how-is-this-related-to-covid)
+	+ [What is "noise"?](#what-is-noise)
++ 💡 [Theory Behind The Methods](#-theory-behind-the-methods)
+	+ [Latest Datum](#latest-datum)
+	+ [Polynomial Interpolation](#polynomial-interpolation)
+		+ [Linear](#linear)
   		+ Centered
   		+ Backward
 	+ Approximation using least-squares
@@ -81,7 +81,7 @@ If you look at any graph of new cases for COVID-19, it's pretty easy to notice t
 
 Latest Datum
 -------------
-The section [What is "noise"](#-what-is-noise) covered why this method is never a good option, so I will reiterate it here again.
+The section [What is "noise"](#what-is-noise) covered why this method is never a good option, so I will reiterate it here again.
 
 > Looking at any graph of new cases for COVID-19, it's pretty easy to notice that there is plenty of noise. This is the result of day-to-day anomalies. Because of this, it's a terrible idea to use the most recent datum as a predictor.
 

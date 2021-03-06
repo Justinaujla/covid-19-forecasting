@@ -16,7 +16,6 @@ The Methods Investigated
   	- [ ] Quadratic Least-Squares Best-Fit Polynomial
 - [ ] **_Time Series Forecasting_**
 	- [ ] ARIMA
-	- [ ] TBAT
 
 Table of Contents
 =================
@@ -36,7 +35,6 @@ Table of Contents
 		+ Quadratic
 	+ Time Series
 		+ ARIMA
-		+ TBAT
 + 🔨 Model Results
 + 📚 Furthur reading
 + 😷 Closing

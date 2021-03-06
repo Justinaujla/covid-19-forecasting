@@ -79,6 +79,8 @@ If you look at any graph of new cases for COVID-19, it's pretty easy to notice t
 
 Latest Datum
 -------------
+The latest datum method does exactly what it sounds like, it returns the value at time t<sub>n</sub> as the prediction for the value at time t<sub>n+1</sub>. This model, although the easiest, is also the worst. Because of this, we'll use this method as a threshold for unacceptable methods. Any method that performs worse than this will be discarded as a viable option.
+
 The section [What is "noise"](#what-is-noise) covered why this method is never a good option, so I will reiterate it here again.
 
 > Looking at any graph of new cases for COVID-19, it's pretty easy to notice that there is plenty of noise. This is the result of day-to-day anomalies. Because of this, it's a terrible idea to use the most recent datum as a predictor.

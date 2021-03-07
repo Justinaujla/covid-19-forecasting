@@ -11,21 +11,24 @@
 class ten_day_average {
   private:
 	double arr[10]{0,0,0,0,0,0,0,0,0,0};
+	int size = 10;
 	double avg{0};
   public:
     double forecast( double x );
 };
 
 double ten_day_average::forecast( double x ) {
-	for( int i{0}; i < 9; i++ ){
+	avg = 0;
+	for( int i{0}; i < size - 1; i++ ){
 		arr[i] = arr[i+1];
 	}
-	arr[9] = x;
-	for( int i{0}; i < 10; i++ ){
+	arr[size-1] = x;
+
+	for( int i{0}; i < size ; i++ ){
 		avg += arr[i];
 	}
-	return avg/10;
+	avg = avg/(double)size;
+	return avg;
 }
-
 
 #endif /* TEN_DAY_AVERAGE_HPP_ */

@@ -101,4 +101,10 @@ From one of your high-school courses, you should know that the 10-day average is
 ### Linear
 Linear interpolation is a well known method of curve fitting for first degree polynomials of the form **_y = a<sub>1</sub>x + a<sub>0</sub>_**. Using discrete sets of data points we can construct linear polynomials to find new data points within the set's range.
 
-Given the data points, <img src="http://latex.codecogs.com/svg.latex?\left(x_{k-1}\&space;,\&space;f\left(x_{k-1}\right)\right)\&space;and\&space;\left(x_{k\&space;},\&space;f\left(x_{k}\right)\right)" title="http://latex.codecogs.com/svg.latex?\left(x_{k-1}\ ,\ f\left(x_{k-1}\right)\right)\ and\ \left(x_{k\ },\ f\left(x_{k}\right)\right)" /> Theinterpolating polynomial will be <img src="http://latex.codecogs.com/svg.latex?\frac{f\left(x_{k}\right)-f\left(x_{k-1}\right)}{x_{k}-x_{k-1}}x&plus;\frac{f\left(x_{k-1}\right)x_{k}-f\left(x_{k}\right)x_{k-1}}{x_{k}-x_{k-1}}" title="http://latex.codecogs.com/svg.latex?\frac{f\left(x_{k}\right)-f\left(x_{k-1}\right)}{x_{k}-x_{k-1}}x+\frac{f\left(x_{k-1}\right)x_{k}-f\left(x_{k}\right)x_{k-1}}{x_{k}-x_{k-1}}" />
+Given the data points, <img src="http://latex.codecogs.com/svg.latex?\left(x_{k-1}\&space;,\&space;f\left(x_{k-1}\right)\right)\&space;and\&space;\left(x_{k\&space;},\&space;f\left(x_{k}\right)\right)" title="http://latex.codecogs.com/svg.latex?\left(x_{k-1}\ ,\ f\left(x_{k-1}\right)\right)\ and\ \left(x_{k\ },\ f\left(x_{k}\right)\right)" />.
+
+The interpolating polynomial will be:
+
+<img src="http://latex.codecogs.com/svg.latex?\frac{f\left(x_{k}\right)-f\left(x_{k-1}\right)}{x_{k}-x_{k-1}}x&plus;\frac{f\left(x_{k-1}\right)x_{k}-f\left(x_{k}\right)x_{k-1}}{x_{k}-x_{k-1}}" title="http://latex.codecogs.com/svg.latex?\frac{f\left(x_{k}\right)-f\left(x_{k-1}\right)}{x_{k}-x_{k-1}}x+\frac{f\left(x_{k-1}\right)x_{k}-f\left(x_{k}\right)x_{k-1}}{x_{k}-x_{k-1}}" />
+
+Interpolation is best used within the data set range, but once we find the linear polynomial nothings stops us from setting **_x_** to **_x<sub>k+1</sub>_**. Doing so will give us an approximation for the next **_y_** value given the next **_x_** value.

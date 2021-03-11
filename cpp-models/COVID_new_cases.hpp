@@ -28,7 +28,7 @@ class COVID_new_cases {
 };
 
 double COVID_new_cases::next_datum( double x , double weight[], int thresh) {
-	return obj5.forecast2(x);
+	return obj4.forecast(x, weight, thresh);
 }
 
 #endif /* COVID_NEW_CASES_HPP_ */

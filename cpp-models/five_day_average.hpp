@@ -28,6 +28,17 @@ double five_day_average::forecast( double x, double weight[], int thresh) {
 	}
 	arr[size-1] = newVal;
 
+	// If last value was zero but the one before and the new aren't, fix the average.
+//	if(arr[size-2] == 0 && arr[size-1] != 0 && arr[size-3] != 0){
+//		arr[size-2] = arr[size-3] + (arr[size-1]-arr[size-5])/4.0;
+//	}
+
+	// If the delta is too big then fix the average
+//	double lin_val = arr[size-3] + (arr[size-1]-arr[size-5])/4.0;
+//	if(std::abs(lin_val - arr[size-2])/lin_val >= thresh){
+//		arr[size-2] = (lin_val+arr[size-2])/2.0;
+//	}
+
 	for( int i{0}; i < size ; i++ ){
 		avg += arr[i]*weight[i];
 //		avg += arr[i];

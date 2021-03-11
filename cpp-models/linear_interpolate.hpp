@@ -11,14 +11,17 @@
 
 class linear_interpolate {
   private:
-	double y1{0},y2{0},x1{0},x2{0},m{0},b{0};
+	double y1{0},y2{0},m{0},b{0};
   public:
     double forecast( double x );
 };
 
 double linear_interpolate::forecast( double x ) {
 	// TODO
-	return 0;
+	y1 = y2;
+	b = y1;
+	y2 = x;
+	return 2.0*(y2-y1)+b;
 }
 
 

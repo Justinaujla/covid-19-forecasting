@@ -36,7 +36,7 @@ Table of Contents
 	+ Time Series
 		+ ARIMA
 + 🔨 Model Results
-+ 📚 Furthur reading
++ 📚 Further reading
 + 😷 Closing
 
 👋🏽 Introduction

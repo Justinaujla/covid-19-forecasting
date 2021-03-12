@@ -18,12 +18,18 @@ class ten_day_average {
 };
 
 double ten_day_average::forecast( double x ) {
+	// Reset average
 	avg = 0;
+
+	// Push all values down one position in the array
 	for( int i{0}; i < size - 1; i++ ){
 		arr[i] = arr[i+1];
 	}
+
+	// Insert new value at head of array
 	arr[size-1] = x;
 
+	// Prediction for next time step's COVID cases
 	for( int i{0}; i < size ; i++ ){
 		avg += arr[i];
 	}

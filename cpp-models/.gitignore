@@ -1,1 +1,7 @@
 /Debug/
+/Release/
+/.settings/
+.cproject
+.project
+data.hpp
+main.cpp

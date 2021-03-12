@@ -15,7 +15,8 @@ class latest_datum {
 };
 
 double latest_datum::forecast( double x ) {
-  return x;
+	// Prediction for next time step's COVID cases; assume it's similar to last time step's cases
+	return x;
 }
 
 

@@ -17,10 +17,12 @@ class linear_interpolate {
 };
 
 double linear_interpolate::forecast( double x ) {
-	// TODO
+	// Simple linear interpolate with last two datum; x-1 and x0
 	y1 = y2;
 	b = y1;
 	y2 = x;
+
+	// Prediction for next time step's COVID cases at x+1
 	return 2.0*(y2-y1)+b;
 }
 

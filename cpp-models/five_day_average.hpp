@@ -19,31 +19,27 @@ class five_day_average {
 
 double five_day_average::forecast( double x, double weight[], int thresh) {
 	double newVal = x;
+
+	// Threshold for new data variance
 	if((std::abs(avg-x)/(double)avg)*100 >= thresh){
 		newVal = std::abs(avg+x)/2.0;
 	}
+
+	// Reset average
 	avg = 0;
+
+	// Push all values down one position in the array
 	for( int i{0}; i < size - 1; i++ ){
 		arr[i] = arr[i+1];
 	}
+
+	// Insert new value at head of array
 	arr[size-1] = newVal;
 
-	// If last value was zero but the one before and the new aren't, fix the average.
-//	if(arr[size-2] == 0 && arr[size-1] != 0 && arr[size-3] != 0){
-//		arr[size-2] = arr[size-3] + (arr[size-1]-arr[size-5])/4.0;
-//	}
-
-	// If the delta is too big then fix the average
-//	double lin_val = arr[size-3] + (arr[size-1]-arr[size-5])/4.0;
-//	if(std::abs(lin_val - arr[size-2])/lin_val >= thresh){
-//		arr[size-2] = (lin_val+arr[size-2])/2.0;
-//	}
-
+	// Prediction for next time step's COVID cases with weighting
 	for( int i{0}; i < size ; i++ ){
 		avg += arr[i]*weight[i];
-//		avg += arr[i];
 	}
-//	avg = avg/(double)size;
 	return avg;
 }
 

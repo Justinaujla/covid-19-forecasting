@@ -9,6 +9,7 @@
 #include "five_day_average.hpp"
 #include "linear_interpolate.hpp"
 #include "linear_least_square.hpp"
+#include "quadratic_least_square.hpp"
 
 
 #ifndef COVID_NEW_CASES_HPP_
@@ -18,17 +19,22 @@
 
 class COVID_new_cases {
   private:
-	latest_datum obj{};
-	linear_interpolate obj2{};
-	ten_day_average obj3{};
-	five_day_average obj4{};
-	linear_least_square obj5{};
+	latest_datum ld_model{};
+	linear_interpolate li_model{};
+	ten_day_average tda_model{};
+	five_day_average fda_model{};
+	linear_least_square lls_model{};
+	quadratic_least_square qls_model{};
+
   public:
     double next_datum( double x, double weight[] , int thresh);
 };
 
 double COVID_new_cases::next_datum( double x , double weight[], int thresh) {
-	return obj4.forecast(x, weight, thresh);
+	double forecast{0};
+	// Example model input:
+	// forecast = model.forecast(double, double *, int)
+	return forecast;
 }
 
 #endif /* COVID_NEW_CASES_HPP_ */

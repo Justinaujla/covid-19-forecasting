@@ -13,18 +13,27 @@ class COVID_new_cases {
     bool at_extreme() const;
 };
 
-
+// Five day moving weighted average model - Best performance
 double COVID_new_cases::next_datum( double x ) {
 	double newVal = x;
+
+	// Threshold for new data variance
 	if((std::abs(avg-x)/(double)avg)*100 >= threshold ){
 		newVal = (avg+x)/2.0;
 	}
+
+	// Reset average
 	avg = 0;
+
+	// Push all values down one position in the array
 	for( int i{0}; i < size - 1; i++ ){
 		arr[i] = arr[i+1];
 	}
+
+	// Insert new value at head of array
 	arr[size-1] = newVal;
 
+	// Prediction for next time step's COVID cases with weighting
 	for( int i{0}; i < size ; i++ ){
 		avg += arr[i]*weights[i];
 	}

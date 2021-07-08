@@ -14,8 +14,6 @@ The Methods Investigated
 - [ ] **_Approximation Theory_**
   	- [ ] Linear Least-Squares Best-Fit Polynomial
   	- [ ] Quadratic Least-Squares Best-Fit Polynomial
-- [ ] **_Time Series Forecasting_**
-	- [ ] ARIMA
 
 Table of Contents
 =================
@@ -33,8 +31,6 @@ Table of Contents
 	+ Approximation using least-squares
 		+ Linear
 		+ Quadratic
-	+ Time Series
-		+ ARIMA
 + 🔨 Model Results
 + 📚 Further reading
 + 😷 Closing

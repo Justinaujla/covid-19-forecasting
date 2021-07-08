@@ -64,7 +64,7 @@ What is "noise"?
 You can think of noise pretty much how you probably already think of it and how Oxford defines it:
 > ## noise
 > <b>a sound, especially one that is loud or unpleasant or that causes disturbance.</b>  </br>
-> <i>"making a noise like a pig in a trough"<i>  </br>
+> <i>"making a noise like a pig in a trough"</i>  </br>
 > 
 > <h6> &mdash; Oxford Languages </h6>
 
